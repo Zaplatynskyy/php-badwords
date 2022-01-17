@@ -27,5 +27,10 @@ $badword = $_GET['parola'];
 
     <h2>La lunghezza del titolo è: <?php echo strlen($title) ?></h2>
     <h2>La lunghezza del testo è: <?php echo strlen($text) ?></h2>
+
+    <h3>La parola da censurare è <span style="text-transform: uppercase; color: red;">"<?php echo $badword ?>"</span></h3>
+
+    <h3>Il nuovo testo con la parola inserita da censurare è:</h3>
+    <p><?php echo str_replace($badword, '***', $text) ?></p>
 </body>
 </html>
